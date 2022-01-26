@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap");
+
+:root {
+    --font: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #363636;
+    color: white;
+    font-family: var(--font);
+    font-size: 22px;
+    text-align: center;
+    padding: 10px;
+    font-weight: 700;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#attemptsLeft {
+    font-family: var(--font);
+    font-size: 30px;
+    background-color: #a60000;
+    padding: 5px 50px;
+    border-radius: 10px;
+    color: white;
+    margin-top: 10px;
+}
+
+.upper {
+    /* Normally, when game is going on */
+    display: grid;
+    grid-template-columns: 180px 180px;
+    grid-template-rows: 80px 180px 100px;
+    gap: 10px;
+    background-color: #e4e4e4;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.upperAfter {
+    /* When game will end */
+    height: 380px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #e4e4e4;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Will appear when the game will end */
+.won {
+    height: 360px;
+    width: 300px;
+    font-size: 50px;
+    border-radius: 10px;
+    font-family: var(--font);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #363636;
+    color: white;
+}
+
+#showYou {
+    color: #a5cffc;
+}
+
+#showMe {
+    color: #f1a9a9;
+}
+
+#you img,
+#me img {
+    width: 100px;
+}
+
+.upper div {
+    background-color: #363636;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font);
+    border-radius: 10px;
+}
+
+.show {
+    height: 80px;
+    font-size: 40px;
+}
+
+#yourScore {
+    font-size: 50px;
+    color: #a5cffc;
+}
+
+#myScore {
+    font-size: 50px;
+    color: #f1a9a9;
+}
+
+.lower {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.lower div {
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.lower div img {
+    width: 150px;
+    transition: all 0.3s ease-in-out;
+}
+
+.lower div img:active {
+    transform: scale(1.1);
+}
+
+.lower div:active {
+    background-color: #f1a9a9;
+    transform: scale(0.9);
+}
+
+@media screen and (max-width: 600px) {
+    .lower div img {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .upper {
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 80px 150px 100px;
+    }
+
+    .lower div img {
+        width: 80px;
+    }
+}
